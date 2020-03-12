@@ -2,15 +2,6 @@
 use lib '.'; # added since from Perl 5.26 '.' is no more in @INC
 use inc::Module::Install;
 
-################################################################################
-# Version information:
-#
-# $Id$
-# $Revision$
-# $HeadURL$
-# $Date$
-#
-
 ##############################################################################
 # Define metadata (we read it from the binary)
 
@@ -30,7 +21,6 @@ requires 'File::Slurp'                   => 0;
 requires 'Monitoring::Plugin::Getopt'    => 0;
 requires 'Monitoring::Plugin'            => 0;
 requires 'Monitoring::Plugin::Threshold' => 0;
-requires 'version'                       => 0;
 
 install_script  'check_connections';
 
