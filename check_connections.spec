@@ -7,7 +7,7 @@
 ################################################################################
 
 %define version          2.1.1
-%define release          1
+%define release          2
 %define sourcename       check_connections
 %define packagename      nagios-plugins-check-connections
 %define nagiospluginsdir %{_libdir}/nagios/plugins
@@ -30,6 +30,7 @@ Source:    http://www.id.ethz.ch/people/allid_list/corti/%{sourcename}-%{version
 BuildRequires: perl(ExtUtils::MakeMaker)
 
 Requires:  nagios-plugins
+Requires:  perl(File::Slurp)
 
 %description
 Nagios plugin to monitor the number of network connections
@@ -61,6 +62,9 @@ rm -rf %{buildroot}
 %{_mandir}/man1/%{sourcename}.1*
 
 %changelog
+* Fri Jun 26 2020 Matteo Corti <matteo.corti@id.ethz.ch> - 2.1.1-2
+- Added dependency to File::Slurp
+
 * Mon Feb  1 2010 Matteo Corti <matteo.corti@id.ethz.ch> - 2.1.1-0
 - updated to 2.1.1: several ePN and RPM fixes
 
